@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<head>
+    <html lang="en">
+    <meta charset="UTF-8">
+    <!-- Tell the browser to encode multiple languages by adding a meta element as a child of the head element. Set its charset attribute to UTF-8. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CatPhotoApp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Berkshire+Swash&family=EB+Garamond&family=Fredericka+the+Great&family=Great+Vibes&family=IBM+Plex+Serif&family=Lemonada&family=Macondo&family=Old+Standard+TT:ital@0;1&family=Pinyon+Script&family=Satisfy&family=Tangerine&family=Titillium+Web&display=swap"
+        rel="stylesheet"> <!-- Fonts -->
+    <link rel="stylesheet" href="catphotoapp.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="Images/logo.png" alt="Cat logo" height="80px">
+        <h1>Cat Photo App</h1>
+        <img class="paws" src="Images/paws.png" alt="Pet paws">
+    </header>
+
+    <main>
+            <h2>Cat Photos</h2>
+        <section class="box">
+            <div>
+                <p>Click here to view more <a href="https://freecatphotoapp.com" target="_blank">cat photos</a>.</p>
+                <a href="https://freecatphotoapp.com"><input type="radio" id="hovera"><img class="imagea round margin"
+                        src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+                        alt="A cute orange cat lying on its back"></a>
+                <label for="hovera"><img class="button" src="Images/button.png" alt="hover"></label>
+            </div>
+            <div class="minigame">
+                <p class="objective">Hover through the image to guide the kitty into the darker box.</p>
+                <div class="walkingcat">
+                    <img class="catbox" src="Images/lightbox.png" alt="Kitty box" width="100px" height="90px">
+                    <img class="catgiph" src="Giphs/catwalking.gif" alt="Kitty walking" height="200px">
+                    <img class="catboxb" src="Images/box.png" alt="Kitty box" width="100px" height="90px">
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Cat Lists</h2>
+            <h3>Things cats love:</h3>
+            <ul>
+                <li><i class="fa-solid fa-paw icon"></i>Cat nip</li>
+                <li><i class="fa-solid fa-paw icon"></i>Laser pointers</li>
+                <li><i class="fa-solid fa-paw icon"></i>Lasagna</li>
+            </ul>
+            <figure>
+                <input type="radio" id="hoverb">
+                <img class="round imageb" src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg"
+                    alt="A slice of lasagna on a plate.">
+                <label for="hoverb"><img class="buttonb" src="Images/button.png" alt="hover"></label>
+                <figcaption>Cats <em>love</em> lasagna.</figcaption>
+            </figure>
+            <h3>Top 3 things cats hate:</h3>
+            <ol>
+                <li>Flea treatment</li>
+                <li>Thunder</li>
+                <li>Other cats</li>
+            </ol>
+            <figure>
+                <input type="radio" name="" id="hoverc">
+                <img class="round imagec" src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
+                    alt="Five cats looking around a field.">
+                <label for="hoverc"><img class="buttonc" src="Images/button.png" alt="hover"></label>
+                <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
+            </figure>
+        </section>
+        <section>
+            <h2>Cat Form</h2>
+            <form action="https://freecatphotoapp.com/submit-cat-photo">
+                <fieldset>
+                    <!-- El marco -->
+                    <legend>Is your cat an indoor or outdoor cat?</legend> <!-- La leyenda al principio del marco -->
+                    <label for=""><input type="radio" name="indoor-outdoor" id="indoor" checked> Indoor</label>
+                    <label for=""><input type="radio" name="indoor-outdoor" id="outdoor"> Outdoor</label>
+                </fieldset>
+                <fieldset class="field2">
+                    <legend>What's your cat personality?</legend>
+                    <input type="checkbox" name="personality" id="loving" value="loving" checked><label
+                        for="loving">Loving</label>
+                    <input type="checkbox" name="personality" id="lazy" value="lazy"><label for="lazy">Lazy</label>
+                    <input type="checkbox" name="personality" id="energetic" value="energetic"><label
+                        for="energetic">Energetic</label>
+                </fieldset>
+                <input class="photo" type="text" name="catphotourl" placeholder="cat photo URL" id="" required>
+                <!-- Both input and button elements are inline elements. -->
+                <button type="submit">Submit</button>
+                <!-- The default behavior of clicking a form button without any attributes submits the form to the location specified in the form's action attribute. -->
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a></p>
+    </footer>
+    </div>
+
+</body>
+
+</html>
+
+<!-- 
+    <input> 
+    01. TYPE: text / radio / checkbox. SPACE between tag and word.
+    02. NAME: To make it so selecting one radio button automatically deselects the other, both buttons must have a name attribute with the same value. Type of information, e.g. personality.
+    03. ID: Same as text.
+    04. VALUE: The form data for the button is based on its name and value attributes. Since your radio buttons do not have a value attribute, the form data will include indoor-outdoor=on, which is not useful when you have multiple buttons. Same as id. -->
+
+
+<!-- 
+        <input> + <label>
+            There's another way to associate an input element's text with the element itself. You can nest the text within a label element and add a for attribute with the same value as the input element's id attribute.
+
+            Associate the text Loving with the checkbox by only nesting the text Loving in a label element and place it to the right side of the checkbox input element.
+
+            <input id="loving" type="checkbox"><label for="loving"> Loving </label>
+     -->
+
+<!-- 
+    <fieldset> 
+    This element is used to group related inputs and labels together in a web form. fieldset elements are block-level elements, meaning that they appear on a new line. -->
