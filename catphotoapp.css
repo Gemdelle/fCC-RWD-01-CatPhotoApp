@@ -20,7 +20,7 @@ font-family: 'Titillium Web', sans-serif; */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    position: absolute;
+    position: fixed;
     z-index: 999;
 }
 
